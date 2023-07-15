@@ -1,0 +1,25 @@
+.cat-card {
+display: flex;
+justify-content: center;
+    align-items: center;
+}
+
+.cat-info {
+    padding-top: 30px;
+}
+
+
+.img-cat {
+    width: 350px;
+}
+
+.cat-description {
+    padding-left: 20px;
+    max-width: 600px;
+}
+
+.cat-span-temperament {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
