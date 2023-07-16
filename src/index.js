@@ -2,6 +2,7 @@ import { fetchBreeds, fetchCatByBreed } from "./api-cat";
 import Notiflix from 'notiflix';
 import axios from "axios";
 axios.defaults.headers.common["x-api-key"] = "live_McMKNV2rrcuDSwoqlCNt210GQCeXFyydyPP6sVUusM3pLz0qPGJSRC1FXqM8ky3W";
+import SlimSelect from 'slim-select'
 
 let api = axios.create({
     baseURL: 'https://api.thecatapi.com/v1/breeds'
@@ -28,7 +29,7 @@ fetchBreeds().then((data) => {
     .catch(err => {
          addHiddenAtribute(refs.loader)
          addHiddenAtribute(refs.select)     
-         Notiflix.Notify.failure(removeHiddenAtribute(refs.error))
+        Notiflix.Notify.failure(removeHiddenAtribute(refs.error))
          console.log(err);
          addHiddenAtribute(refs.catInfo)         
         })
@@ -73,3 +74,4 @@ function removeHiddenAtribute(el) {
 function addHiddenAtribute(el) {
     el.hidden = true;
 }
+  
